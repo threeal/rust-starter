@@ -5,3 +5,16 @@ pub fn fibonacci_sequence(n: usize) -> Vec<usize> {
     }
     sequence
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fibonacci_sequence() {
+        assert_eq!(fibonacci_sequence(0), vec![]);
+        assert_eq!(fibonacci_sequence(1), vec![1]);
+        assert_eq!(fibonacci_sequence(2), vec![1, 1]);
+        assert_eq!(fibonacci_sequence(5), vec![1, 1, 2, 3, 5]);
+    }
+}
