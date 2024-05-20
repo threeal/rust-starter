@@ -1,0 +1,12 @@
+[package]
+name = "rust-starter"
+version = "0.1.0"
+authors = ["Alfi Maulana <alfi.maulana.f@gmail.com>"]
+edition = "2021"
+description = "A starter Rust package for generating Fibonacci sequences"
+repository = "https://github.com/threeal/rust-starter"
+license = "Unlicense"
+keywords = ["rust", "starter", "fibonacci"]
+categories = ["algorithms", "mathematics"]
+
+[dependencies]
