@@ -10,3 +10,4 @@ keywords = ["rust", "starter", "fibonacci"]
 categories = ["algorithms", "mathematics"]
 
 [dependencies]
+clap = "4.5.4"
