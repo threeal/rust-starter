@@ -14,3 +14,11 @@ jobs:
 
       - name: Test Package
         run: cargo test
+
+      - name: Install tarpaulin
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-tarpaulin
+
+      - name: Check Test Coverage
+        run: cargo tarpaulin --fail-under 45
