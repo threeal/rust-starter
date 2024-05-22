@@ -12,5 +12,10 @@ jobs:
       - name: Check Out Project
         uses: actions/checkout@v4.1.5
 
+      - name: Install tarpaulin
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-tarpaulin
+
       - name: Test Package
-        run: cargo test
+        run: cargo tarpaulin --fail-under 45
