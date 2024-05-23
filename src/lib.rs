@@ -11,7 +11,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_fibonacci_sequence() {
+    fn generate_fibonacci_sequence() {
         assert_eq!(fibonacci_sequence(0), vec![]);
         assert_eq!(fibonacci_sequence(1), vec![1]);
         assert_eq!(fibonacci_sequence(2), vec![1, 1]);
