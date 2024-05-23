@@ -1,0 +1,3 @@
+[all-features-coverage]
+all-features = true
+fail-under = 45

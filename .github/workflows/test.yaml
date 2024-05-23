@@ -18,4 +18,4 @@ jobs:
           tool: cargo-tarpaulin
 
       - name: Test Package
-        run: cargo tarpaulin --fail-under 45
+        run: cargo tarpaulin
