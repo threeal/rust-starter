@@ -6,7 +6,7 @@ on:
     branches: [main]
 jobs:
   build:
-    name: Test Package
+    name: Test Crate
     runs-on: ubuntu-latest
     steps:
       - name: Check Out Project
@@ -17,5 +17,5 @@ jobs:
         with:
           tool: cargo-tarpaulin
 
-      - name: Test Package
+      - name: Test Crate
         run: cargo tarpaulin

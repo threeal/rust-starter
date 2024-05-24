@@ -6,7 +6,7 @@ on:
     branches: [main]
 jobs:
   build:
-    name: Check Package
+    name: Check Crate
     runs-on: ubuntu-latest
     steps:
       - name: Check Out Project
