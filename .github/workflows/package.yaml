@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Out Project
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v4.2.1
 
       - name: Package Crate
         run: cargo package
