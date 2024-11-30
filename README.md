@@ -1,6 +1,8 @@
 # Rust Starter
 
-A minimalistic [GitHub repository template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to kickstart your [Rust](https://www.rust-lang.org/) project
+A minimalistic [GitHub repository template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to kickstart your [Rust](https://www.rust-lang.org/) project.
+
+This template contains a sample Rust crate with several supporting configuration
 
 ## Key Features
 
