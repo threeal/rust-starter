@@ -5,12 +5,26 @@ on:
   push:
     branches: [main]
 jobs:
-  build:
-    name: Build Crate
+  build-project:
+    name: Build Project
     runs-on: ubuntu-24.04
     steps:
-      - name: Check Out Project
+      - name: Checkout Project
         uses: actions/checkout@v4.2.2
+
+      - name: Install Tools
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-tarpaulin
 
       - name: Build Crate
         run: cargo build
+
+      - name: Test Crate
+        run: cargo tarpaulin
+
+      - name: Check Formatting
+        run: cargo fmt --check
+
+      - name: Package Crate
+        run: cargo package
