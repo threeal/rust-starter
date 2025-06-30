@@ -16,5 +16,5 @@ fn main() {
         .collect::<Vec<_>>()
         .join(" ");
 
-    println!("{}", output);
+    println!("{output}");
 }

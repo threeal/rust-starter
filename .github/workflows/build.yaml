@@ -23,6 +23,9 @@ jobs:
       - name: Test Crate
         run: cargo tarpaulin
 
+      - name: Check Lint
+        run: cargo clippy -- --deny warnings
+
       - name: Check Formatting
         run: cargo fmt --check
 
