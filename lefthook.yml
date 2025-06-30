@@ -4,6 +4,12 @@ pre-commit:
     - name: check types
       run: cargo check
 
+    - name: fix lint
+      run: cargo clippy --fix --allow-dirty
+
+    - name: check lint
+      run: cargo clippy -- --deny warnings
+
     - name: fix formatting
       run: cargo fmt
 
