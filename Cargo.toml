@@ -1,12 +1,12 @@
 [package]
-name = "rust-starter"
-version = "0.1.0"
-authors = ["Alfi Maulana <alfi.maulana.f@gmail.com>"]
+name = "bonacci"
+version = "0.0.0"
+authors = ["Leonardo Bonacci <leonardo@bonacci.com>"]
 edition = "2021"
-description = "A starter Rust crate for generating Fibonacci sequences"
-repository = "https://github.com/threeal/rust-starter"
+description = "An example Rust project for generating a Fibonacci sequence"
+repository = "https://github.com/leonardo/bonacci"
 license = "Unlicense"
-keywords = ["rust", "starter", "fibonacci"]
+keywords = ["example", "fibonacci"]
 categories = ["algorithms", "mathematics"]
 
 [dependencies]
