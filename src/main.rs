@@ -1,5 +1,5 @@
 fn main() {
-    let matches = clap::Command::new("generate_sequence")
+    let matches = clap::Command::new("bonacci")
         .version("0.1.0")
         .about("Generate a Fibonacci sequence up to the given number of terms")
         .arg(
@@ -10,7 +10,7 @@ fn main() {
         .get_matches();
 
     let n = matches.get_one::<usize>("n").unwrap_or(&0);
-    let output = rust_starter::fibonacci_sequence(*n)
+    let output = bonacci::fibonacci_sequence(*n)
         .iter()
         .map(|x| x.to_string())
         .collect::<Vec<_>>()
