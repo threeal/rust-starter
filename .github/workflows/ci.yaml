@@ -12,22 +12,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.2
 
+      - name: Setup Lefthook
+        uses: threeal/setup-lefthook-action@v1.0.0
+
       - name: Install tools
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-tarpaulin
+
+      - name: Check pre-commit hook
+        run: lefthook run pre-commit --all-files
 
       - name: Build
         run: cargo build
 
       - name: Test
         run: cargo tarpaulin
-
-      - name: Check lint
-        run: cargo clippy -- --deny warnings
-
-      - name: Check formatting
-        run: cargo fmt --check
 
       - name: Package
         run: cargo package
