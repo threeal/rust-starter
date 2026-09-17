@@ -1,6 +1,9 @@
 pre-commit:
   piped: true
   jobs:
+    - name: install toolchain
+      run: rustup install
+
     - name: check types
       run: cargo check
 
