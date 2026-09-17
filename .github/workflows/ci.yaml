@@ -1,33 +1,33 @@
-name: Build
+name: CI
 on:
   workflow_dispatch:
   pull_request:
   push:
     branches: [main]
 jobs:
-  build-project:
-    name: Build Project
+  build:
+    name: Build
     runs-on: ubuntu-24.04
     steps:
-      - name: Checkout Project
+      - name: Checkout
         uses: actions/checkout@v6.0.2
 
-      - name: Install Tools
+      - name: Install tools
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-tarpaulin
 
-      - name: Build Crate
+      - name: Build
         run: cargo build
 
-      - name: Test Crate
+      - name: Test
         run: cargo tarpaulin
 
-      - name: Check Lint
+      - name: Check lint
         run: cargo clippy -- --deny warnings
 
-      - name: Check Formatting
+      - name: Check formatting
         run: cargo fmt --check
 
-      - name: Package Crate
+      - name: Package
         run: cargo package
