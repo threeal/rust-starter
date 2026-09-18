@@ -2,7 +2,7 @@
 name = "bonacci"
 version = "0.0.0"
 authors = ["Leonardo Bonacci <leonardo@bonacci.com>"]
-edition = "2021"
+edition = "2024"
 description = "An example Rust project for generating a Fibonacci sequence"
 repository = "https://github.com/leonardo/bonacci"
 license = "Unlicense"
