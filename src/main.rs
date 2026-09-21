@@ -1,3 +1,4 @@
+#[cfg(not(tarpaulin_include))]
 fn main() {
     let matches = clap::Command::new("bonacci")
         .version("0.1.0")
