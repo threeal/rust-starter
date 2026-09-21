@@ -1,4 +1,3 @@
 [all-features-coverage]
 all-features = true
-exclude-files = ["src/main.rs"]
 fail-under = 100

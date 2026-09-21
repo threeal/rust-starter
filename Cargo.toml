@@ -11,3 +11,6 @@ categories = ["algorithms", "mathematics"]
 
 [dependencies]
 clap = "4.6.7"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }
