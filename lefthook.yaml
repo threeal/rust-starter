@@ -15,5 +15,8 @@ pre-commit:
     - name: check lint
       run: cargo clippy -- --deny warnings
 
-    - name: fix formatting
+    - name: fix rust formatting
       run: cargo fmt
+
+    - name: fix formatting
+      run: dprint fmt
