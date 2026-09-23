@@ -1,3 +1,2 @@
-[all-features-coverage]
-all-features = true
+[coverage]
 fail-under = 100
