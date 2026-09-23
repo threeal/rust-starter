@@ -2,12 +2,12 @@
 name = "bonacci"
 version = "0.0.0"
 authors = ["Leonardo Bonacci <leonardo@bonacci.com>"]
-edition = "2024"
-description = "An example Rust project for generating a Fibonacci sequence"
-repository = "https://github.com/leonardo/bonacci"
-license = "Unlicense"
-keywords = ["example", "fibonacci"]
 categories = ["algorithms", "mathematics"]
+edition = "2024"
+keywords = ["example", "fibonacci"]
+license = "Unlicense"
+repository = "https://github.com/leonardo/bonacci"
+description = "An example Rust project for generating a Fibonacci sequence"
 
 [dependencies]
 clap = "4.6.7"
