@@ -1,8 +1,3 @@
-#![warn(clippy::all)]
-#![warn(clippy::pedantic)]
-#![warn(clippy::nursery)]
-#![warn(clippy::cargo)]
-
 #[must_use]
 pub fn fibonacci_sequence(n: usize) -> Vec<usize> {
     let mut sequence = vec![1; n];
