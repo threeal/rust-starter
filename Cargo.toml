@@ -12,5 +12,10 @@ description = "An example Rust project for generating a Fibonacci sequence"
 [dependencies]
 clap = "4.6.7"
 
+[lints.clippy]
+pedantic = "warn"
+nursery = "warn"
+cargo = "warn"
+
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }

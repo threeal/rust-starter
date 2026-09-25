@@ -13,7 +13,7 @@ fn main() {
     let n = matches.get_one::<usize>("n").unwrap_or(&0);
     let output = bonacci::fibonacci_sequence(*n)
         .iter()
-        .map(|x| x.to_string())
+        .map(ToString::to_string)
         .collect::<Vec<_>>()
         .join(" ");
 
