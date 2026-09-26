@@ -18,4 +18,5 @@ nursery = "warn"
 cargo = "warn"
 
 [lints.rust]
+warnings = "deny"
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }

@@ -13,7 +13,7 @@ pre-commit:
       run: cargo clippy --fix --allow-dirty
 
     - name: check lint
-      run: cargo clippy -- --deny warnings
+      run: cargo clippy
 
     - name: fix rust formatting
       run: cargo fmt
