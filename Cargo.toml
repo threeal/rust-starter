@@ -19,4 +19,5 @@ cargo = "warn"
 
 [lints.rust]
 warnings = "deny"
+missing_docs = "warn"
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }
