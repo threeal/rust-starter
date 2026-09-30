@@ -1,13 +1,13 @@
 [package]
 name = "bonacci"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Leonardo Bonacci <leonardo@bonacci.com>"]
 categories = ["algorithms", "mathematics"]
 edition = "2024"
-keywords = ["example", "fibonacci"]
+keywords = ["fibonacci", "sequence"]
 license = "Unlicense"
 repository = "https://github.com/leonardo/bonacci"
-description = "An example Rust project for generating a Fibonacci sequence"
+description = "An example library and CLI for generating a Fibonacci sequence"
 
 [dependencies]
 clap = "4.6.7"
