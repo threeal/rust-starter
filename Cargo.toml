@@ -7,6 +7,7 @@ edition = "2024"
 keywords = ["fibonacci", "sequence"]
 license = "Unlicense"
 repository = "https://github.com/leonardo/bonacci"
+rust-version = "1.98"
 description = "An example library and CLI for generating a Fibonacci sequence"
 
 [dependencies]
