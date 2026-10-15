@@ -6,7 +6,7 @@
 #[cfg(not(tarpaulin_include))]
 fn main() {
     let matches = clap::Command::new("bonacci")
-        .version("0.1.0")
+        .version(env!("CARGO_PKG_VERSION"))
         .about("Generate a Fibonacci sequence up to the given number of terms")
         .arg(
             clap::arg!([n] "The number of terms")
