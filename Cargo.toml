@@ -17,11 +17,12 @@ clap = "4.6.7"
 default = "deny"
 
 [lints.clippy]
-pedantic = "warn"
-nursery = "warn"
-cargo = "warn"
+all = "deny"
+pedantic = "deny"
+nursery = "deny"
+cargo = "deny"
 
 [lints.rust]
 warnings = "deny"
-missing_docs = "warn"
-unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }
+missing_docs = "deny"
+unexpected_cfgs = { level = "deny", check-cfg = ["cfg(tarpaulin_include)"] }
