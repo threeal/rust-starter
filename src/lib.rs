@@ -1,7 +1,4 @@
 //! An example library for generating a Fibonacci sequence.
-//!
-//! This is the placeholder library of a project template; replace
-//! [`fibonacci_sequence`] with your own logic.
 
 /// Generates a Fibonacci sequence up to the given number of terms.
 ///

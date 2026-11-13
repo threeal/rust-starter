@@ -31,11 +31,13 @@ lefthook install
 Replace or extend the template files to fit your project:
 
 - **`src/lib.rs`** — Replace with your own library logic.
-- **`src/main.rs`** — Replace or remove the placeholder CLI. Remove this file and the `clap` dependency if your project doesn't need a CLI.
+- **`src/main.rs`** — Replace or remove the placeholder CLI.
 - **`Cargo.toml`** — Update the package name, description, version, authors, and other metadata.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
 - **`README.md`** — Replace with a description of your project.
+
+If your project doesn't need a CLI, remove `src/main.rs`, its `exclude-files` entry in `tarpaulin.toml`, and the `clap` dependency in `Cargo.toml`.
 
 ## Development
 
