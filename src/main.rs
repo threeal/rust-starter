@@ -3,7 +3,6 @@
 //! This is the placeholder CLI of a project template; remove it along with the
 //! `clap` dependency if your project doesn't need one.
 
-#[cfg(not(tarpaulin_include))]
 fn main() {
     let matches = clap::Command::new("bonacci")
         .version(env!("CARGO_PKG_VERSION"))
