@@ -30,8 +30,7 @@ lefthook install
 
 Replace or extend the template files to fit your project:
 
-- **`src/lib.rs`** — Replace with your own library logic.
-- **`src/main.rs`** — Replace or remove the placeholder CLI.
+- **`src/`** — Replace the placeholder library, CLI, and tests with your own code.
 - **`Cargo.toml`** — Update the package name, description, version, authors, and other metadata.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
@@ -41,7 +40,7 @@ If your project doesn't need a CLI, remove `src/main.rs`, its `exclude-files` en
 
 ## Development
 
-Write code in `src/`. Unit tests live in a `tests` module alongside the code they cover. Run the test suite with:
+Run the tests with coverage through tarpaulin:
 
 ```sh
 cargo tarpaulin
