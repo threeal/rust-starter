@@ -11,7 +11,7 @@ rust-version = "1.100"
 description = "An example library and CLI for generating a Fibonacci sequence"
 
 [dependencies]
-clap = "4.6.8"
+clap = "4.6.9"
 
 [lints.cargo]
 default = "deny"
