@@ -1,7 +1,6 @@
 [package]
 name = "bonacci"
 version = "0.1.0"
-authors = ["Leonardo Bonacci <leonardo@bonacci.com>"]
 categories = ["algorithms", "mathematics"]
 edition = "2024"
 keywords = ["fibonacci", "sequence"]
