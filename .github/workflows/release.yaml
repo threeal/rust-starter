@@ -3,8 +3,25 @@ on:
   push:
     tags: ["**"]
 jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Install toolchain
+        run: rustup install
+
+      - name: Check version
+        run: |
+          VERSION=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].version')
+          echo "$VERSION"
+          test "${GITHUB_REF_NAME#v}" = "$VERSION"
+
   build:
     name: Build
+    needs: check
     runs-on: ubuntu-26.04
     steps:
       - name: Checkout
