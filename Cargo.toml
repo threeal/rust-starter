@@ -5,7 +5,7 @@ categories = ["algorithms", "mathematics"]
 edition = "2024"
 keywords = ["fibonacci", "sequence"]
 license = "Unlicense"
-repository = "https://github.com/leonardo/bonacci"
+repository = "https://github.com/threeal/rust-starter"
 rust-version = "1.100"
 description = "An example library and CLI for generating a Fibonacci sequence"
 
