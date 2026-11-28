@@ -6,6 +6,9 @@ jobs:
   crates-io:
     name: crates.io
     runs-on: ubuntu-26.04
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -13,7 +16,12 @@ jobs:
       - name: Install toolchain
         run: rustup install
 
+      - name: Authenticate with crates.io
+        id: auth
+        continue-on-error: true
+        uses: rust-lang/crates-io-auth-action@v1.0.6
+
       - name: Publish crate
         env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token || secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish
