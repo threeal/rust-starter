@@ -10,12 +10,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
-      - name: Install toolchain
-        run: rustup install
-
       - name: Check version
         run: |
-          VERSION=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].version')
+          VERSION=$(yq -p toml -oy '.package.version' Cargo.toml)
           echo "$VERSION"
           test "${GITHUB_REF_NAME#v}" = "$VERSION"
 
@@ -35,7 +32,7 @@ jobs:
 
       - name: Archive binaries
         run: |
-          NAME=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].name')
+          NAME=$(yq -p toml -oy '.package.name' Cargo.toml)
           TARGET=$(rustc --print host-tuple)
           tar -czf "$NAME-$TARGET.tar.gz" -C dist/bin .
 
